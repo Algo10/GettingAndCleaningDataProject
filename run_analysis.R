@@ -66,6 +66,6 @@ tidyData = aggregate(mergedData, by=list(activity = mergedData$Activity, subject
 # Remove Subject and Activity column, since a mean of those has no use
 tidyData[,ncol(tidyData)]=NULL
 tidyData[,ncol(tidyData)]=NULL
-write.table(tidyData, "tidy_data.txt", sep="\t")
+write.table(tidyData, "tidy_data.txt", sep="\t", row.names=FALSE)
 
 #tidyTable<-read.table("tidy_data.txt", sep="\t")
